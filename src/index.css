@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #1f2723;
+  background: #f6f1e8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --ink: #1f2723;
+  --muted: #7d8179;
+  --coral: #d45b42;
+  --paper: #fffaf3;
+  --line: #ddd7cc;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input { font-family: inherit; }

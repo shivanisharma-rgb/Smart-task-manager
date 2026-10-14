@@ -1,0 +1,64 @@
+.app-shell {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 26px 0 72px;
+}
+
+.topbar, .section-heading, .todo-summary, .todo-item, .add-form {
+  display: flex;
+  align-items: center;
+}
+
+.topbar { justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 18px; }
+.eyebrow { margin: 0; color: var(--muted); font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.accent-text { color: var(--coral); }
+.date-label { color: var(--muted); font-size: 13px; }
+.intro { display: flex; justify-content: space-between; align-items: end; padding: 76px 0 72px; }
+h1 { color: var(--ink); font-size: clamp(48px, 7vw, 92px); line-height: .9; letter-spacing: -.06em; margin: 18px 0 0; }
+h1 em { color: var(--coral); font-family: Georgia, serif; font-weight: 400; letter-spacing: -.08em; }
+.intro-copy { color: var(--muted); font-size: 15px; line-height: 1.6; text-align: right; }
+.section-heading { justify-content: space-between; margin-bottom: 18px; }
+h2 { color: var(--ink); font-size: 22px; letter-spacing: -.03em; margin: 0; }
+.section-heading > span { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .12em; }
+.profile-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.profile-card { position: relative; display: flex; align-items: center; gap: 14px; min-height: 104px; padding: 18px; background: var(--paper); border: 1px solid var(--line); border-radius: 5px; }
+.profile-avatar { display: grid; place-items: center; flex: 0 0 54px; height: 54px; border-radius: 50%; background: var(--card-accent); color: var(--ink); font-size: 14px; font-weight: 800; }
+.profile-card h2 { font-size: 16px; margin-bottom: 4px; }
+.profile-card p { color: var(--muted); font-size: 12px; margin: 0; }
+.profile-status { position: absolute; top: 17px; right: 16px; color: #4f8a68; font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.todo-section { margin-top: 78px; }
+.todo-heading { align-items: end; }
+.todo-heading h2 { font-size: 32px; margin-top: 8px; }
+.filter-button, .delete-button { border: 0; background: transparent; color: var(--coral); cursor: pointer; font: inherit; font-size: 12px; font-weight: 800; }
+.filter-button { border-bottom: 1px solid var(--coral); padding: 4px 0; }
+.add-form { gap: 10px; margin: 26px 0 14px; }
+.add-form input { min-width: 0; flex: 1; border: 1px solid var(--line); border-radius: 4px; padding: 15px 16px; background: var(--paper); color: var(--ink); font: inherit; font-size: 14px; outline: none; }
+.add-form input:focus { border-color: var(--coral); box-shadow: 0 0 0 3px rgba(212, 91, 66, .12); }
+.add-form button { border: 0; border-radius: 4px; padding: 15px 18px; background: var(--ink); color: #fffaf3; cursor: pointer; font: inherit; font-size: 13px; font-weight: 800; }
+.add-form button span { color: var(--coral); font-size: 18px; margin-left: 8px; }
+.todo-list { border-top: 1px solid var(--ink); }
+.todo-item { gap: 14px; border-bottom: 1px solid var(--line); padding: 16px 4px; }
+.check-button { display: grid; place-items: center; flex: 0 0 22px; height: 22px; border: 1px solid var(--ink); border-radius: 50%; background: transparent; color: var(--paper); cursor: pointer; font-size: 12px; font-weight: 800; }
+.is-complete .check-button { border-color: var(--coral); background: var(--coral); }
+.todo-copy { display: flex; flex: 1; flex-direction: column; gap: 3px; color: var(--ink); font-size: 15px; }
+.todo-copy small { color: var(--muted); font-size: 11px; }
+.is-complete .todo-copy > span { color: var(--muted); text-decoration: line-through; }
+.delete-button { color: var(--muted); font-size: 11px; }
+.delete-button:hover { color: var(--coral); }
+.empty-state { border-bottom: 1px solid var(--line); color: var(--muted); padding: 24px 4px; }
+.todo-summary { justify-content: flex-end; gap: 42px; border-top: 1px solid var(--ink); margin-top: 28px; padding-top: 18px; }
+.todo-summary div { display: flex; align-items: baseline; gap: 8px; }
+.todo-summary strong { color: var(--ink); font-size: 23px; }
+.todo-summary span { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+
+@media (max-width: 680px) {
+  .app-shell { width: min(100% - 32px, 520px); padding-top: 18px; }
+  .intro { display: block; padding: 58px 0 52px; }
+  .intro-copy { margin-top: 24px; text-align: left; }
+  .profile-grid { grid-template-columns: 1fr; }
+  .todo-section { margin-top: 56px; }
+  .add-form { align-items: stretch; flex-direction: column; }
+  .todo-summary { justify-content: space-between; gap: 8px; }
+  .todo-summary div { align-items: flex-start; flex-direction: column; gap: 2px; }
+}
